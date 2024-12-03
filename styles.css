@@ -1,0 +1,365 @@
+:root {
+    /* ## Colors */
+
+    /* ### Primary */
+
+    --Lime-Green: hsl(163, 72%, 41%);
+    --Bright-Red: hsl(356, 69%, 56%);
+
+    --Facebook: hsl(208, 92%, 53%);
+    --Twitter: hsl(203, 89%, 53%);
+    --Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+    --YouTube: hsl(348, 97%, 39%);
+
+    /* #### Dark Theme */
+
+    --Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+
+    /* #### Light Theme */
+
+    --Toggle: hsl(230, 22%, 74%);
+
+    /* ### Neutral */
+
+    /* #### Dark Theme */
+
+    --Very-Dark-Blue-BG: hsl(230, 17%, 14%);
+    --Very-Dark-Blue-Top-BG-Pattern: hsl(232, 19%, 15%);
+    --Dark-Desaturated-Blue-Card-BG: hsl(228, 28%, 20%);
+    --Desaturated-Blue-Text: hsl(228, 34%, 66%);
+    --White-Text: hsl(0, 0%, 100%);
+
+    /* #### Light Theme */
+
+    --White-BG: hsl(0, 0%, 100%);
+    --Very-Pale-Blue-Top-BG-Pattern: hsl(225, 100%, 98%);
+    --Light-Grayish-Blue-Card-BG: hsl(227, 47%, 96%);
+    --Dark-Grayish-Blue-Text: hsl(228, 12%, 44%);
+    --Very-Dark-Blue-Text: hsl(230, 17%, 14%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Inter", sans-serif;
+}
+
+/* DARK MODE STYLE */
+
+.dark-mode {
+    background-color: var(--Very-Dark-Blue-BG);
+    color: white;
+}
+
+.dark-mode-card {
+    background-color: var(--Dark-Desaturated-Blue-Card-BG) !important;
+}
+
+.dark-mode-h2{
+    color: white !important;
+}
+
+.dark-mode-followers{
+    color: var(--Desaturated-Blue-Text) !important;
+}
+
+.dark-mode-titleDarkMode{
+    color: var(--Desaturated-Blue-Text) !important;
+}
+
+.dark-mode-name-perfil{
+    color: var(--Desaturated-Blue-Text) !important;
+}
+
+.dark-mode-title-followers{
+    color: var(--Desaturated-Blue-Text) !important;
+}
+
+.dark-mode-title-overview{
+    color: white !important;
+}
+
+.dark-mode-title-card{
+    color: var(--Desaturated-Blue-Text) !important;
+}
+
+.container {
+    padding: 20px;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.header .group.first {}
+
+.header .group.first h2 {
+    margin-bottom: 0;
+    color: var(--Very-Dark-Blue-Text);
+}
+
+.header .group.first span {
+    color: var(--Dark-Grayish-Blue-Text);
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+.header .line {
+    height: 1px;
+    width: 100%;
+    background-color: var(--Dark-Grayish-Blue-Text);
+    margin: 15px 0;
+}
+
+.header .group.second {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .group.second span {
+    color: var(--Dark-Grayish-Blue-Text);
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+/* Label styling */
+.label {
+    font-size: 16px;
+}
+
+/* The switch container */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+/* Hide the checkbox input */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--Toggle);
+    /* background: linear-gradient(90deg, #00c9ff, #92fe9d); */
+    transition: 0.4s;
+    border-radius: 24px;
+}
+
+/* The circle inside the slider */
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+    /* border: 1px solid red; */
+}
+
+/* When checked, change the slider background */
+.switch input:checked+.slider {
+    /* background: var(--Toggle); */
+    background: linear-gradient(90deg, #00c9ff, #92fe9d);
+}
+
+/* Move the circle to the right when checked */
+.switch input:checked+.slider::before {
+    transform: translateX(26px);
+    background-color: var(--Dark-Desaturated-Blue-Card-BG);
+}
+
+/* CARD GROUP ONE  */
+
+.cards.group-first {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.cards.group-first .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--Light-Grayish-Blue-Card-BG);
+    border-radius: 5px;
+    padding: 20px;
+    border-top: 4px solid var(--Facebook);
+}
+
+.bt-twitter {
+    border-top: 4px solid var(--Twitter) !important;
+}
+
+.bt-instagram {
+    border-top: 4px solid transparent;
+    border-image-source: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    border-image-slice: 1;
+}
+
+
+.bt-youtube {
+    border-top: 4px solid var(--YouTube) !important;
+}
+
+.cards.group-first .card .group.first {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.cards.group-first .card .group.first span {
+    color: var(--Dark-Grayish-Blue-Text);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0;
+}
+
+.cards.group-first .card h2 {
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-size: 3rem;
+}
+
+.cards.group-first .card span {
+    color: var(--Dark-Grayish-Blue-Text);
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+}
+
+.cards.group-first .card .group.second {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.cards.group-first .card .group.second img {
+    height: 5px;
+}
+
+.cards.group-first .card .group.second span {
+    color: var(--Lime-Green);
+    font-size: 0.75rem !important;
+    letter-spacing: 0;
+    font-weight: 800;
+    margin: 20px 0;
+}
+
+.title-container {}
+
+.title-container h2 {
+    color: var(--Dark-Grayish-Blue-Text);
+}
+
+.cards.group-second {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.cards.group-second .card {
+    padding: 25px;
+    border-radius: 5px;
+    background-color: var(--Light-Grayish-Blue-Card-BG);
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
+.cards.group-second .card .group.first {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cards.group-second .card .group.first span {
+    color: var(--Dark-Grayish-Blue-Text);
+    font-weight: 800;
+}
+
+.cards.group-second .card .group.second {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.cards.group-second .card .group.second span {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.cards.group-second .card .group.second .group-children {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.cards.group-second .card .group.second .group-children span {
+    font-weight: 800;
+    font-size: 0.85rem;
+}
+
+.span-red {
+    color: var(--Bright-Red) !important;
+}
+
+.span-green {
+    color: var(--Lime-Green) !important;
+}
+
+@media only screen and (min-width:1200px) {
+    .container {
+        width: 1100px;
+        margin: 0 auto;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .header .group.second {
+        column-gap: 10px;
+    }
+
+    .header .line {
+        display: none;
+    }
+
+    .cards.group-first {
+        flex-direction: row;
+        column-gap: 20px;
+    }
+
+    .cards.group-first .card {
+        width: 100%;
+    }
+
+    .cards.group-second {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+    }
+}
